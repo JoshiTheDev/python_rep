@@ -26,11 +26,11 @@ def rub_login(id,password):
 		driver.quit()
 		exit()
 
-	ping_response = subprocess.call(["/bin/ping", "-c1", "-w100", "1.1.1.1"], stdout=subprocess.PIPE)
+	ping_response = subprocess.call(["/bin/ping", "-c1", "-w100", "208.67.222.222"], stdout=subprocess.PIPE)
 	while(ping_response == 0):
 		print("[✓] Still connected")
 		time.sleep(60)
-		ping_response = subprocess.call(["/bin/ping", "-c1", "-w100", "1.1.1.1"], stdout=subprocess.PIPE)
+		ping_response = subprocess.call(["/bin/ping", "-c1", "-w100", "208.67.222.222"], stdout=subprocess.PIPE)
 
 	rub_login(id,password)
 
